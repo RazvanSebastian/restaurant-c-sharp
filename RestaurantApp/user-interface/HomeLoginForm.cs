@@ -83,6 +83,7 @@ namespace RestaurantApp
                             {
                                 UserForm userFrom = new UserForm(userSearched);
                                 userFrom.Show();
+                                context.Dispose();
                                 this.Hide();
                             }
                             else

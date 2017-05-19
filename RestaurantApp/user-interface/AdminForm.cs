@@ -32,6 +32,7 @@ namespace RestaurantApp
         private IUserRepository userRepository;
         private IRoleRepository roleRepository;
         private IFoodStuffRepository foodRepository;
+        private IOrderRepository orderRepository;
         private DataBaseSecurityService dbSecurer;
 
         ImageHandlerService imageService;
@@ -42,6 +43,7 @@ namespace RestaurantApp
             this.userRepository = new UserRepository(context);
             this.roleRepository = new RoleRepository(context);
             this.foodRepository = new FoodStuffRepository(context);
+            this.orderRepository = new OrderRepository(context);
             this.imageService = new ImageHandlerService();
             this.dbSecurer = new DataBaseSecurityService();
             this.userLogged = user;
@@ -248,6 +250,7 @@ namespace RestaurantApp
                 DialogResult dialogResult = MessageBox.Show("Sunteti sigur ca doriti sa stergeti utilizatorul?", "Verificare", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    this.orderRepository.RemoveUserFieldByUserId(this.userList[e.RowIndex].IdUser);
                     this.userRepository.DeleteUserById(this.userList[e.RowIndex].IdUser);
                     this.refreshDataGridView2OnChange();
                 }

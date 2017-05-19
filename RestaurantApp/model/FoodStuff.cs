@@ -38,6 +38,6 @@ namespace RestaurantApp.model
         [Column("image")]
         public byte[] ImageContent { get; set; }
         
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> OrderFood { get; set; }
     }
 }

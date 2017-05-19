@@ -13,7 +13,7 @@ namespace RestaurantApp.model
     {
         public enum OrderStatus
         {
-            WAITING,PREPARING,SERVED,PAID
+            PREPARING,SERVED,PAID
         }
 
         [Key]
@@ -30,7 +30,7 @@ namespace RestaurantApp.model
 
         public virtual User User { get; set; }
 
-        public virtual ICollection<FoodStuff> FoodStuffs { get; set; }
+        public virtual ICollection<FoodStuff> OrderFood { get; set; }
 
         public virtual Table Table { get; set; }
     }

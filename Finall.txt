@@ -1,0 +1,11 @@
+</ul>
+</li>
+
+<li>
+<h4>Total de plata : &nbsp; TotalDePlata &nbsp; &nbsp;lei</h4>
+</li>
+</ul>
+
+<p>&nbsp;</p>
+<h3 style="text-align: center;">Multumim ca ati ales&nbsp;</h3>
+<h3 style="text-align: center;"><strong>Magnifique</strong></h3>
